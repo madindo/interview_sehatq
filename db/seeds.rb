@@ -15,8 +15,8 @@ User.new({ name: "Madindo", username: 'madindo', email: 'madindo@gmail.com', pas
   Schedule.create([{
     user_id: rand(2..10),
     doctor_id: rand(1..10),
-    start: currentdate,
-    end: currentdate + 1.hour
+    start_date: currentdate,
+    end_date: currentdate + 1.hour
   }])
 
 end

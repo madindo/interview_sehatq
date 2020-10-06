@@ -10,7 +10,6 @@ class SchedulesController < ApplicationController
   def create
     @schedule = Schedule.new(schedule_params)
     @checkSchedule = Schedule.where("doctor_id = ?", schedule_params[:doctor_id])
-    
     if @schedule.save && @checkSchedule.count() <= 10
       render json: @schedule, status: :created
     else
@@ -25,7 +24,7 @@ class SchedulesController < ApplicationController
   private
 
     def schedule_params
-      params.permit(:doctor_id, :user_id, :start, :end )
+      params.permit(:doctor_id, :user_id, :start_date, :end_date )
     end
   
 end

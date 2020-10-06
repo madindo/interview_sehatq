@@ -3,8 +3,8 @@ class CreateSchedules < ActiveRecord::Migration[5.2]
     create_table :schedules do |t|
       t.belongs_to :doctor
       t.belongs_to :user
-      t.datetime :start
-      t.datetime :end
+      t.datetime :start_date
+      t.datetime :end_date
       t.timestamps
     end
   end

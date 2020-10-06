@@ -31,11 +31,11 @@ ActiveRecord::Schema.define(version: 2020_10_01_065604) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "schedules", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "schedules", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "doctor_id"
     t.bigint "user_id"
-    t.datetime "start"
-    t.datetime "end"
+    t.datetime "start_date"
+    t.datetime "end_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["doctor_id"], name: "index_schedules_on_doctor_id"
